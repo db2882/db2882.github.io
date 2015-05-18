@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="dbstyle.css"> 
+<title>Display Tables</title>
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+<h2>Select a table to display:</h2>
+<form action="<?php $_PHP_SELF ?>" method="get">
+<input type="radio" name="table" value="student" checked>Student
+<input type="radio" name="table" value="instructor">Instructor<br>
+<input type="submit">
+</form>
+<header>
+
+<?php
+   mb_internal_encoding('UTF-8');
+   mb_http_output('UTF-8');
+
+   if(!strcmp($_GET["table"], "Airplanes") || !strcmp($_GET["table"], "Flights"))
+   {
+       include 'sunapeedb.php';
+       $db = new SunapeeDB();
+       $db->connect();
+
+       $db->get_table($_GET["table"]);
+   
+       $db->disconnect();
+   } else { print("No table selected."); }
+?>
+</div>
+</body>
+</html>

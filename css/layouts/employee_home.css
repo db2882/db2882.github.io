@@ -1,0 +1,62 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+	
+   	background: white;
+}
+
+ h1,h2,h3 {
+  color: #1f8dd6;
+  text-align: center;
+}
+
+#head {
+	  background-color: #1f8dd6;
+	 /* #26A06D*/
+}
+
+#future_flights{
+	margin: auto;
+}
+
+#past_flights{
+	margin: auto;
+}
+
+.banner {
+    background: url('/img/airplane.jpg') no-repeat fixed ;
+    text-align: center;
+    background-size: cover;
+    
+
+    height: 452px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+
+}
+#button_wrap1{
+	text-align: center;
+  padding-bottom: 20px;
+}
+#button_wrap2{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.banner-head{
+	color: white;
+  font-weight: 500;
+  text-shadow: 0 1px 1px black;
+}
+
+ul { float: right; }
+li { float: left; }
+
+button.pure-button.pure-button-primary {
+	width: 20em;
+}
+
